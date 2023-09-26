@@ -7,9 +7,9 @@
 
 </head>
 <body>
-    <h1>Word Frequency Counter</h1>
-    
-    <form action="process.php" method="post">
+    <h1>Word Frequency Counter</h1>	
+	
+    <form id="<?php echo $myText ?>" class="form" action="process.php" method="post">
         <label for="text">Paste your text here:</label><br>
         <textarea id="text" name="text" rows="10" cols="50" required></textarea><br><br>
         
@@ -20,9 +20,11 @@
         </select><br><br>
         
         <label for="limit">Number of words to display:</label>
-        <input type="number" id="limit" name="limit" value="10" min="1"><br><br>
+        <input type="number" id="limit" name="limit" value="10" min="1"><br>
         
+		<label>Ignored Words: "is", "a", "the", "and", "in", "it", "so", "on" </label>
         <input type="submit" value="Calculate Word Frequency">
     </form>
+	
 </body>
 </html>
